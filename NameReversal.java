@@ -8,6 +8,8 @@
 // public class - the class name MUST match the file name
 // class - it can be any name
 
+import java.util.Scanner;
+
 public class NameReversal {
 
   public static void main( String[] args )  {
@@ -70,6 +72,28 @@ public class NameReversal {
      System.out.println( "num2 = " + num2 ) ;
     }
     
+    /*
+     * Project: Name Reversal
+     * Des: Enter your name. Using a for loop, reverse your name and print.
+     * Ex: -> Jaehyung Lim -> gnaeyhuJ imJ
+     */
+    String name;
+    String revName = "";
+    Scanner scan = new Scanner( System.in );
+    
+    System.out.println( "\n\nEnter your name: " );
+    name = scan.nextLine();
+    
+    System.out.println( "Your name is: " + name );
+    // Use a for loop; String; substring(...); toLowerCase() (x)
+    
+    for ( int i = name.length()-1; i >= 0; i--) { // name = 11, index = 10
+      revName = revName + name.substring(i, i+1);
+       //revName = revName + name.charAt(i);
+    }
+    
+    
+    System.out.println( "Your reversed name is: " + revName );
     
   } // end main method
   
